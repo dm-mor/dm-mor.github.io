@@ -1,0 +1,77 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+
+
+  {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "Записи" }}</h2><hr>
+    <ul class="posts">
+      {% for post in paginator.posts %}
+        <li><span>{% assign m = post.date | date: "%-m" %}
+          {{ post.date | date: "%-d" }}
+          {% case m %}
+      {% when '1' %}января
+      {% when '2' %}февраля
+      {% when '3' %}марта
+      {% when '4' %}апреля
+      {% when '5' %}мая
+      {% when '6' %}июня
+      {% when '7' %}июля
+      {% when '8' %}августа
+      {% when '9' %}сентября
+      {% when '10' %}октября
+      {% when '11' %}ноября
+      {% when '12' %}декабря
+          {% endcase %}
+          {{ post.date | date: "%Y" }}
+        </span> <br><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+        <p class="description">{% if post.description %}{{ post.description | strip_html | strip_newlines | truncate: 250 }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 250 }}{% endif %}</p><hr></li>
+      {% endfor %}
+    </ul>
+    <style>
+        .pagbut{
+            border: 2px solid #129b39 !important;
+            width: 250px;
+            height: 50px;
+            text-align: center;
+            border-radius: 20px;
+            padding-top:0px;
+        }
+        .pagbut:hover{
+            background:#129b39 ;
+        }
+        .pagbut h2{
+            color: #129b39; 
+        }
+        .pagbut a{
+            text-decoration: none;
+        }
+        .pagbut h2:hover{
+            color:white;
+        }
+        @media (max-width: 600px) {
+            .pagbut{
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+    <div class="pagination">
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="previous button__outline"><div class="pagbut" style="float: left;"><h2>Новые записи</h2></div></a>
+        {% endif %}
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="next button__outline"><div class="pagbut" style="float: right;"><h2>Cтарые записи</h2></div></a>
+        {% endif %}
+      </div>
+<br><br>
+    <p class="rss-subscribe">Подписаться <a href="{{ "/feed.xml" | relative_url }}">через RSS</a></p>
+  {%- endif -%}
+
+</div>

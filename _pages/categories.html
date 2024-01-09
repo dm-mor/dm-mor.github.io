@@ -1,0 +1,20 @@
+---
+layout: default
+title: Категории
+permalink: /categories/
+---
+	
+<h3 style="margin-bottom: 3rem;">Список всех статей по доступным категориям</h3>
+
+{% for postscat in site.categories %}
+{% assign cat = postscat | first %}
+<h4 id="{{ cat | slugify }}"> - {{ cat }}</h4>
+<ul>
+	{% for post in site.categories[cat] %}
+	<li>
+		{{post.date | date: "%d-%m-%Y"}}
+		<a style="color: #1a8080; margin-left: 1rem;" href="{{post.url}}">{{post.title}}</a>
+	</li>
+	{% endfor %}
+</ul>
+{% endfor %}

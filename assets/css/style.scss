@@ -2,3 +2,27 @@
 ---
 
 @import 'jekyll-theme-cayman';
+.posts li a{
+color:rgb(41, 139, 41);
+font-size: 35px;
+font-weight: 600;
+text-decoration: none !important;
+}
+.posts li a:hover{
+    color:rgb(34, 102, 34);
+}
+.posts{
+    list-style: none;
+    padding-left:0px;
+    align: center;
+}
+.posts li span{
+    padding-left: 0;
+}
+.post-list-heading{
+    text-align: center;
+    font-size: 60px;
+}
+img{
+    border-radius: 20px;
+}
