@@ -1,187 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head> 
+      <link rel="stylesheet" href="main.css">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-  m[i].l=1*new Date();
-  for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-  k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-  ym(97458522, "init", {
-       clickmap:true,
-       trackLinks:true,
-       accurateTrackBounce:true,
-       webvisor:true
-  });
+<script type="text/javascript" src="js.js">
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/97458522" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-        <style>
-
-@media screen and (prefers-color-scheme: dark) {
-  i, p, h1, h2, h3, h4, h5, h6, .m-0, .mb-4{
-            color:#fff}  
-            .aa{
-              background:#323433 ;
-            }
-}
-i, p, h1, h2, h3, h4, h5, h6, .m-0, .mb-4{
-            color:var(--font-color);}  
-            .cv{
-                color: rgb(20, 170, 108)
-            }
-            .theme-light {
-  --color-primary: #0060df;
-  --color-secondary: #fbfbfe;
-  --color-accent: #fd6f53;
-  --font-color: #323433;
-}
-.theme-dark {
-  --color-primary: #17ed90;
-  --color-secondary: #2a2c2d;
-  --color-accent: #12cdea;
-  --font-color: #ffffff;
-}
-.aa {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  background: var(--color-secondary);
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.aa h1 {
-  color: var(--font-color);
-  font-family: sans-serif;
-}
-.aa button {
-  color: var(--font-color);
-  background: var(--color-primary);
-  padding: 10px 20px;
-  border: 0;
-  border-radius: 5px;
-}
-
-/* The switch - the box around the slider */
-.switch {
-  position:relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 40px;
-  width: 40px;
-  left: 0px;
-  bottom: 4px;
-  top: 0;
-  bottom: 0;
-  margin: auto 0;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  box-shadow: 0 0px 15px #2020203d;
-  background: white url('2.png');
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-input:checked + .slider {
-  background-color: #21f395;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #21f395;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(24px);
-  -ms-transform: translateX(24px);
-  transform: translateX(24px);
-  background: white url('1.png');
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-.ds{
-  position: fixed;
-  bottom:5%;
-  right: 3%;
-  z-index: 5;
-}
-
-        </style>      
+            
 <link rel="stylesheet" href="bs.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <link rel="stylesheet" href="faq.css">
 <title>ЧаВо - Долина Технологий 2024 от Касперского</title> 
     </head>
     <body class="aa">
-      <script type="text/javascript">
-              function setTheme(themeName) {
-            localStorage.setItem('theme', themeName);
-            document.documentElement.className = themeName;
-        }
-
-        // function to toggle between light and dark theme
-        function toggleTheme() {
-            if (localStorage.getItem('theme') === 'theme-dark') {
-                setTheme('theme-light');
-            } else {
-                setTheme('theme-dark');
-            }
-        }
-
-        // Immediately invoked function to set the theme on initial load
-        (function () {
-            if (localStorage.getItem('theme') === 'theme-dark') {
-                setTheme('theme-dark');
-                document.getElementById('slider').checked = false;
-            } else {
-                setTheme('theme-light');
-              document.getElementById('slider').checked = true;
-            }
-        })();
-      </script>
+    <div class="menu">
+      <a href="https://techdolina.kaspersky.ru/"><img class="ml" src="l.png" width="200px" style="position: relative;top:-10px"></a>
+      <a href="/dt/"><p>Главная</p><i class="bi bi-house-fill me-3 lh-1 display-5"></i></a>
+      <a href="/dt/news/"><p>Новости</p><i class="bi bi-newspaper me-3 lh-1 display-5"></i></a>
+      <a href="/dt/soft/"><p>ПО</p><i class="bi bi-app-indicator me-3 lh-1 display-5"></i></a>
+      <a href="https://docs.google.com/spreadsheets/d/18LtjEhejPQVbvwiDyVMS_8IIOvL9bs8K/edit?usp=sharing&ouid=113461259540577762693&rtpof=true&sd=true"><p>Рейтинг</p><i class="bi bi-list-ol me-3 lh-1 display-5"></i></a>
+      <a href="https://safeboardkaspersky.teachbase.ru/course_sessions/826395"><p>Тичбейс</p><i class="bi bi-feather me-3 lh-1 display-5"></i></a>
       <div class="ds">
         <label id="switch" class="switch">
           <input type="checkbox" onchange="toggleTheme()" id="slider">
           <span class="slider round"></span>
       </label></div>
+    </div>
+    <div class="bt"><a href="#" style="text-decoration: none;">^</a></div>
     <section class="bsb-faq-3 py-3 py-md-5 py-xl-8">
   <div class="container">
     <div class="row justify-content-md-center">
@@ -194,10 +39,9 @@ input:checked + .slider:before {
     </div>
   </div>
 
-  <!-- FAQs: My Account -->
 
 
-  <!-- FAQs: Refunds and Exchanges -->
+  <!-- Мероприятие -->
   <div class="mb-8">
     <div class="container">
       <div class="row justify-content-center">
@@ -311,7 +155,7 @@ input:checked + .slider:before {
       </div>
     </div>
   </div>
-
+  <!--Участие-->
   <div class="mb-8">
     <div class="container">
       <div class="row justify-content-center">
@@ -438,6 +282,7 @@ input:checked + .slider:before {
       </div>
     </div>
   </div> 
+  <!--Проживание-->
   <div class="mb-8">
     <div class="container">
       <div class="row justify-content-center">
@@ -514,8 +359,7 @@ input:checked + .slider:before {
       </div>
     </div>
   </div>
-
-  <!-- FAQs: Placing an Order -->
+  <!-- Проезд -->
   <div class="mb-0">
     <div class="container">
       <div class="row justify-content-center">

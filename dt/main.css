@@ -1,0 +1,228 @@
+.menu{
+    background: var(--menu-color);
+    width: 90%;
+    height: 70px;
+    border-radius: 40px;
+    position: fixed;
+    top: 2%;
+    z-index: 5;
+}
+.menu a{
+    text-decoration: none;
+    color:var(--font-color);
+    font-size: 2em;
+    position: relative;
+    top: -5%;
+    left: 20px;
+    padding-left: 20px;
+}
+.menu a p:hover, .menu a i:hover{
+    color:#139252;
+}
+.menu a i{
+    display: none;
+}
+.menu a p{
+    position: relative;
+    top: -10%;
+    display: inline;
+}
+
+.tgn{
+    position: relative;
+    top: 5em;
+}
+@media screen and (width < 800px) {
+    .menu{
+        width: 99%;
+        height: 70px;
+        border-radius: 40px;
+        position: fixed;
+        top: 78%;
+        z-index: 5;
+    }
+    .menu a{
+        text-decoration: none;
+        color:var(--font-color);
+        font-size: 1em;
+        position: relative;
+        top: -5%;
+        left: 0px;
+        padding-left: 5px;
+    }
+    .ml{
+        display: none;
+    }
+    .menu a p{
+        display: none;
+    }
+    .menu a i{
+        display: inline;
+        position: relative;
+        top: 20px;
+    }
+    .bt{ 
+        background:#0eca7f;
+        border-radius:50%;
+        width:50px;
+        height:50px;
+        text-align:center;
+        position:fixed;
+        bottom:15%;
+        right: 5%;
+        z-index: 4;
+      }
+}
+@media screen and (max-width: 370px) {
+    .menu{
+        top: 87%;
+    }
+}
+@media screen and (width < 400px) {
+    .menu{
+        top: 90%;
+    }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    i, p, h1, h2, h3, h4, h5, h6, .m-0, .mb-4{
+              color:#fff}  
+              .aa{
+                background:#323433 ;
+              }
+  }
+  i, p, h1, h2, h3, h4, h5, h6, .m-0, .mb-4{
+              color:var(--font-color);}  
+              .cv{
+                  color: rgb(20, 170, 108)
+              }
+   .theme-light {
+    --color-primary: #00df8a;
+    --color-secondary: #fbfbfe;
+    --color-accent: #fd6f53;
+    --font-color: #323433;
+    --menu-color: rgba(206, 213, 209, 0.8);
+  }
+  .theme-dark {
+    --color-primary: #17ed90;
+    --color-secondary: #323433;
+    --color-accent: #12cdea;
+    --font-color: #ffffff;
+    --menu-color: rgba(120, 113, 113, 0.8);
+  }
+  .aa {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: var(--color-secondary);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .aa h1 {
+    color: var(--font-color);
+    font-family: sans-serif;
+  }
+  .aa button {
+    color: var(--font-color);
+    background: var(--color-primary);
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px;
+  }
+  
+  /* The switch - the box around the slider */
+  .switch {
+    position:relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 40px;
+    width: 40px;
+    left: 0px;
+    bottom: 4px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    box-shadow: 0 0px 15px #2020203d;
+    background: white url('2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  input:checked + .slider {
+    background-color: #21f395;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #21f395;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(24px);
+    -ms-transform: translateX(24px);
+    transform: translateX(24px);
+    background: white url('1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  .ds{
+display: inline;
+position: relative;
+float: right;
+right: 3%;
+top:25%;
+  }
+  .bt a{
+    color:white;top:0px;position:relative;text-decoration:none;font-size:40px
+  }
+  .bt:hover{
+    background:#0eb374;
+  }
+  .bt{ 
+    background:#0eca7f;
+    border-radius:50%;
+    width:50px;
+    height:50px;
+    text-align:center;
+    position:fixed;
+    bottom:5%;
+    right: 5%;
+    z-index: 4;
+  }
