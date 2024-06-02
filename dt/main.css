@@ -62,15 +62,8 @@
         top: 20px;
     }
     .bt{ 
-        background:#0eca7f;
-        border-radius:50%;
-        width:50px;
-        height:50px;
-        text-align:center;
-        position:fixed;
-        bottom:15%;
+        bottom: 11% !important;;
         right: 5%;
-        z-index: 4;
       }
 }
 @media screen and (max-width: 370px) {
