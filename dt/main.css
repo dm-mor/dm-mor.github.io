@@ -32,7 +32,7 @@
     position: relative;
     top: 5em;
 }
-@media screen and (width < 1020px) {
+@media screen and (width < 1081px) {
     .menu{
         width: 99%;
         height: 70px;
