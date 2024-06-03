@@ -69,7 +69,7 @@
 }
 @media screen and (width < 500px) {
     .bt{ 
-        bottom: 11% !important;;
+        bottom: 15% !important;;
         right: 5%;
       }
 }
