@@ -19,7 +19,7 @@
 .menu a p:hover, .menu a i:hover{
     color:#139252;
 }
-.menu a i{
+.menu a svg{
     display: none;
 }
 .menu a p{
@@ -49,7 +49,7 @@
         position: relative;
         top: -5%;
         left: 0px;
-        padding-left: 5px;
+        padding-left: 10px;
     }
     .ml{
         display: none;
@@ -57,7 +57,7 @@
     .menu a p{
         display: none;
     }
-    .menu a i{
+    .menu a svg{
         display: inline;
         position: relative;
         top: 20px;
