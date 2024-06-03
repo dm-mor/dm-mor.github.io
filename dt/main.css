@@ -32,13 +32,14 @@
     position: relative;
     top: 5em;
 }
-@media screen and (width < 800px) {
+@media screen and (width < 1020px) {
     .menu{
         width: 99%;
         height: 70px;
         border-radius: 40px;
         position: fixed;
-        top: 78%;
+        top: auto;
+        bottom:1%;
         z-index: 5;
     }
     .menu a{
@@ -62,18 +63,19 @@
         top: 20px;
     }
     .bt{ 
+        bottom: 22% !important;;
+        right: 3% !important;
+      }
+}
+@media screen and (width < 500px) {
+    .bt{ 
         bottom: 11% !important;;
         right: 5%;
       }
 }
-@media screen and (max-width: 370px) {
-    .menu{
-        top: 87%;
-    }
-}
-@media screen and (width < 400px) {
-    .menu{
-        top: 90%;
+@media screen and (width < 350px) {
+    #nimm{
+        display: none;
     }
 }
 
@@ -202,7 +204,7 @@ float: right;
 right: 3%;
 top:25%;
   }
-  .bt a{
+  .bt p{
     color:white;top:0px;position:relative;text-decoration:none;font-size:40px
   }
   .bt:hover{
