@@ -1,3 +1,55 @@
+.bpso{
+    background: var(--menu-color);
+    width: 100%;
+    position: relative;
+    border-radius: 40px;
+    padding: 15px;
+    margin-right: 40px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.bpso img{
+    float: left;
+}
+.bpso h1{
+    text-align: left;
+}
+.bpso svg{
+    position: relative;
+    margin: auto;
+    display: block;
+}
+.bpsot{
+    position: relative;
+    left: 20px;
+    padding-right: 15px;
+}
+.bpso a:hover{
+    color: rgb(15, 207, 114) !important;
+}
+.pagbut{
+    border: 2px solid #129b39 !important;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #129b39!important; 
+}
+.pagbut:hover{
+    background:#129b39 ;
+    color: white!important;
+}
+
+@media (max-width: 600px) {
+    .pagbut{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
 .menu{
     background: var(--menu-color);
     width: 90%;
@@ -6,6 +58,9 @@
     position: fixed;
     top: 2%;
     z-index: 5;
+}
+img{
+    border-radius: 20px !important;
 }
 .menu a{
     text-decoration: none;
@@ -16,8 +71,15 @@
     left: 20px;
     padding-left: 20px;
 }
-.menu a p:hover, .menu a i:hover{
-    color:#139252;
+a{
+    color: rgb(20, 170, 108)!important;
+    text-decoration: none!important;
+}
+a:hover{
+    color: rgb(15, 207, 114)!important
+}
+.menu a p:hover{
+    color: #139252 !important;
 }
 .menu a svg{
     display: none;
@@ -27,12 +89,43 @@
     top: -10%;
     display: inline;
 }
-
+.wbn{
+    font-size: 40px;
+    text-align: center;
+    position: relative;
+    padding-top: 2em;
+}
+.wbv{
+    width: 70%;
+    border-radius: 40px;
+    height: 500px;
+}
 .tgn{
     position: relative;
     top: 5em;
-}
+}  
+#bpso7{
+        margin-bottom: 25%;
+    }
 @media screen and (width < 1081px) {
+    .bpso img{
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto 
+    }
+    .bpso h1{
+        text-align: center;
+    }
+    .bpso{
+        display: block;
+        
+    }
+
+    .wbv{
+        width: 90%;
+        height: 300px;
+    }
     .menu{
         width: 99%;
         height: 70px;
@@ -66,6 +159,12 @@
         bottom: 22% !important;;
         right: 3% !important;
       }
+      #nimm1{
+        display: none;
+    }
+    #lp{
+        display: inline !important;
+    }
 }
 @media screen and (width < 500px) {
     .bt{ 
@@ -78,6 +177,11 @@
         display: none;
     }
 }
+@media screen and (width < 1281px) {
+    #lp{
+        display: none;
+    }
+}
 
 @media screen and (prefers-color-scheme: dark) {
     i, p, h1, h2, h3, h4, h5, h6, .m-0, .mb-4{
@@ -87,7 +191,7 @@
               }
   }
   i, p, h1, h2, h3, h4, h5, h6, .m-0, .mb-4{
-              color:var(--font-color);}  
+              color:var(--font-color)!important;}  
               .cv{
                   color: rgb(20, 170, 108)
               }
