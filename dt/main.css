@@ -1,3 +1,6 @@
+.cv{
+color: rgb(20, 170, 108)!important;
+}
 .bpso{
     background: var(--menu-color);
     width: 100%;
@@ -192,9 +195,7 @@ a:hover{
   }
   i, p, h1, h2, h3, h4, h5, h6, .m-0, .mb-4{
               color:var(--font-color)!important;}  
-              .cv{
-                  color: rgb(20, 170, 108)!important;
-              }
+
    .theme-light {
     --color-primary: #00df8a;
     --color-secondary: #fbfbfe;
