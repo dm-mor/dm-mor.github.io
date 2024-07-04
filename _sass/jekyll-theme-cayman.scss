@@ -235,10 +235,10 @@ img {vertical-align: middle;}
 /* Number text (1/3 etc) */
 .numbertext {
   color: #ffffff;
-  font-size: 16px;
+  font-size: 20px;
   padding-left: 50%;
   position: absolute;
-  top: 0;
+  bottom: -23px;
 }
 
 /* The dots/bullets/indicators */
@@ -278,9 +278,19 @@ iframe{border-radius: 20px;width: 100%;}
 .bt{ background:#0eca3d;border-radius:50%;width:50px;height:50px;text-align:center;position:fixed;top:86%;left: 90%
 }
 }
+#pc{
+  display: none;
+}
+#m{
+  display: block;
+}
 @media screen and (width > 900px){
-
-
+#pc{
+  display: block;
+}
+#m{
+  display: none;
+}
 iframe{height:500px}
 .nus1, .nus2{
     border-radius: 20px;
