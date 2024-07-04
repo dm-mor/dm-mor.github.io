@@ -1,3 +1,378 @@
+.switch {
+  position:relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  left: 0px;
+  bottom: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  box-shadow: 0 0px 15px #2020203d;
+  background: white url('../img/2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input:checked + .slider {
+  background-color: #21f395;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #21f395;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  background: white url('../img/1.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+@media screen and (prefers-color-scheme: dark) {
+  i, p, h1, h2, h3, h4, h5, h6, .m-0, .mb-4{
+            color:#fff}  
+            body{
+              background:#323433 ;
+            }
+}
+i, p, h1, h2, h3, h4, h5, h6, .m-0, .mb-4, ol{
+            color:var(--font-color)!important;}  
+            .cv{
+                color: rgb(20, 170, 108);
+            }
+
+.theme-light {
+  --color-primary: #2b8c2b
+  --color-secondary: #fbfbfe;
+  --color-accent: #fd6f53;
+  --font-color: #323433;
+  --menu-color: #f3f3f3b3;
+  --body-color: #ffffff;
+}
+.theme-dark {
+  --color-primary: #17ed90;
+  --color-secondary: #323433;
+  --color-accent: #12cdea;
+  --font-color: #ffffff;
+  --menu-color: #787171cc;
+  --body-color: #323433;
+}
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mgsa1 {
+  display: none;
+}
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+
+
+.gal1, .gal2 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  text-decoration: none;
+}
+
+  #gb img{
+    height:auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+/* nextbb & previous buttons */
+.prev, .nextb {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  background: #0db149;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 20px;
+  user-select: none;
+  
+}
+/* Position the "nextb button" to the right */
+.nextb {
+  right: 0;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .nextb:hover {
+  background-color: #1cd253;
+  color: rgb(255, 255, 255);
+}
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #ffffff;
+  font-size: 16px;
+  padding-left: 50%;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+iframe{border-radius: 20px;width: 100%;}
+.da {color:purple;float:none}
+.bt{ background:#0eca3d;border-radius:50%;width:50px;height:50px;text-align:center;position:fixed;top:90%;left:86%
+}
+.sidebar2, .sidebar1{
+  display: none;
+}
+.minf{display: block;}
+@media screen and (width > 500px){
+.bt{ background:#0eca3d;border-radius:50%;width:50px;height:50px;text-align:center;position:fixed;top:86%;left: 90%
+}
+}
+@media screen and (width > 900px){
+
+
+iframe{height:500px}
+.nus1, .nus2{
+    border-radius: 20px;
+    background:var(--menu-color);
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 15px 10px 15px;
+    margin-bottom: 20px;
+}
+.nus2{
+  position: fixed;
+  right: 0;
+  top:13%;
+  background:rgba(243, 243, 243, 0.703);
+}
+.sidebar2{
+    width: 17%;
+    float: left;
+    display: block;
+    bottom: -10px;
+    margin-left: 10px;
+    position: fixed;
+    
+
+}
+.sidebar3{
+  width: 17%;
+  float: right;
+  display: block;
+  margin-top: 100%;
+  margin-right: 3%;
+  border-radius: 20px;
+  background: var(--menu-color);
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 15px 10px 15px;
+}
+.sidebar1{
+  width: 17%;
+  float: left;
+  display: block;
+  margin-top: 3%;
+  margin-left: 3%;
+  border-radius: 20px;
+  background: var(--menu-color);
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 15px 10px 15px;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+.minf{display: none;}
+.sidebar1 h3{
+  margin-bottom: 0px !important;
+  color:#159957 !important;
+}
+.sidebar2 h4{
+  margin-top: -20px !important;
+  color: var(--color-primary) !important;
+}
+.da {color:purple;float:right}
+#gb img{
+  height:400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+} 
+.imgb img, .imgb iframe{
+  height: 500px
+ }
+.prv{
+  float:right;
+  width: 165px;
+}
+}
+.imgb img{
+      display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+video{border-radius: 20px;}
+@media screen and (width < 500px){
+.imgb img, .imgb iframe{
+ width: 100%;
+}}
+.bt p{
+  color: white !important;text-decoration:none;font-size:40px;font-weight:800; top:-40px;position:relative;
+}
+.bt:hover{
+  background:#0eb337 ;
+}
+table, tr, td, th{border: 1px solid black;border-radius: 20px}
 @import "normalize";
 @import "rouge-github";
 @import "variables";
@@ -32,6 +407,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: $body-text-color;
+  background: var(--body-color);
 }
 
 #skip-to-content {
@@ -106,6 +482,7 @@ a {
 }
 
 .page-header {
+  border-radius: 0 0 25px 25px ;
   color: $header-heading-color;
   text-align: center;
   background-color: $header-bg-color;
@@ -127,6 +504,7 @@ a {
 .project-name {
   margin-top: 0;
   margin-bottom: 0.1rem;
+  color: #fff !important;
 
   @include large {
     font-size: 3.25rem;
@@ -145,6 +523,7 @@ a {
   margin-bottom: 2rem;
   font-weight: normal;
   opacity: 0.7;
+  color: #fff !important;
 
   @include large {
     font-size: 1.25rem;
@@ -199,6 +578,10 @@ a {
 
   img {
     max-width: 100%;
+    padding-right: 10px;
+    padding-top: 4px;
+    border-radius: 20px;
+
   }
 
   h1,

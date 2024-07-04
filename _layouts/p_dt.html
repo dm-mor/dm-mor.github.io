@@ -3,27 +3,68 @@
 
 <head>
   <meta charset="UTF-8">
-  {% seo %}
+  {% seo %}  
   <meta name="theme-color" content="#157878">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style"
     type="text/css" crossorigin>
     <link rel="icon" href="/assets/img/logo.png" type="image/png">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   {% include head-custom.html %}
 </head>
 
 <body oncopy="return false;" oncut="return false;" ondragstart="return false;" ondrop="return false;" oncontextmenu="return false;">
-    <script type="text/javascript" src="/script/jsset.js"></script>
+  <script type="text/javascript" src="/script/jsset.js"></script>
+
   <header class="page-header" role="banner">
     <h1 class="project-name">{{ site.title | default: site.github.repository_name }}</h1>
     <h2 class="project-tagline">{{ site.description | default: site.github.project_tagline }}</h2>
     {% include header.html %}
   </header>
+  <aside class="sidebar2">
+    <div class="nus1">
+    <h2>Содержание</h2>
+  <a href="#d1"><h4>С чего всё начиналось</h4></a>
+  <a href="#d2"><h4>Начало участия</h4></a>
+  <a href="#d3"><h4>Что было дальше?</h4></a>
+  <a href="#d4"><h4>Про поездку</h4></a>
+  <a href="#d5"><h4>Москва</h4></a>
+  <a href="#d6"><h4>Первый день Долины технологий</h4></a>
+  <a href="#d7"><h4>Второй день Долины технологий</h4></a>
+  <a href="#d8"><h4>Продолжение 14 июня</h4></a>
+</div>
+</aside>
   <main id="content" class="main-content" role="main">
-    {{ content }}
+    <small>{% assign m = page.date | date: "%-m" %}
+      {{ page.date | date: "%-d" }}
+      {% case m %}
+    {% when '1' %}января
+    {% when '2' %}февраля
+    {% when '3' %}марта
+    {% when '4' %}апреля
+    {% when '5' %}мая
+    {% when '6' %}июня
+    {% when '7' %}июля
+    {% when '8' %}августа
+    {% when '9' %}сентября
+    {% when '10' %}октября
+    {% when '11' %}ноября
+    {% when '12' %}декабря
+      {% endcase %}
+      {{ page.date | date: "%Y" }}
+    </small>
+    <h1 class="hepos">{{ page.title }}</h1>
+    
+    
+    
+    {{content}}
+    
+    {% if page.tags %}
+      <small>Теги: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
+    {% endif %}
 
     <footer class="site-footer">
       <span class="site-footer-credits">Сделано в Студии цифровой разработки "Апельсин"</span>
